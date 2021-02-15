@@ -8,34 +8,34 @@ const SquareRoot = require('../src/operations/SquareRoot');
 
 test('Test - Calculation Instantiation', () => {
     let op = Addition;
-    let calculation = new Calculation(1,2,op);
-    expect(calculation.a).toBe(1);
+    let calculation = new Calculation(4,2,op);
+    expect(calculation.a).toBe(4);
     expect(calculation.b).toBe(2);
     expect(calculation.op).toBe(op);
 });
 
 test('Test - Results for Addition', () => {
     let op = Addition;
-    let calculation = new Calculation(1,2,op);
-    expect(calculation.GetResults()).toBe(3);
+    let calculation = new Calculation(4,2,op);
+    expect(calculation.GetResults()).toBe(6);
 });
 
 test('Test - Results for Subtraction', () => {
     let op = Subtraction;
-    let calculation = new Calculation(1,2,op);
-    expect(calculation.GetResults()).toBe(-1);
+    let calculation = new Calculation(4,2,op);
+    expect(calculation.GetResults()).toBe(2);
 });
 
 test('Test - Results for Multiplication', () => {
     let op = Multiplication;
-    let calculation = new Calculation(1,2,op);
-    expect(calculation.GetResults()).toBe(2);
+    let calculation = new Calculation(4,2,op);
+    expect(calculation.GetResults()).toBe(8);
 });
 
 test('Test - Results for Division', () => {
     let op = Division;
-    let calculation = new Calculation(1,2,op);
-    expect(calculation.GetResults()).toBe(0.5);
+    let calculation = new Calculation(4,2,op);
+    expect(calculation.GetResults()).toBe(2);
 });
 
 test('Test - Results for Square', () => {

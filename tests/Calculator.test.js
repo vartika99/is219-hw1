@@ -1,23 +1,23 @@
 const Calculator = require('../src/Calculator');
 
 test('Calculator adding two numbers', () => {
-    let result = Calculator.Addition(1,2);
-    expect(result.GetResults()).toBe(3);
+    let result = Calculator.Addition(4, 2);
+    expect(result.GetResults()).toBe(6);
 });
 
 test('Calculator subtracting two numbers', () => {
-    let result = Calculator.Subtraction(1,2);
-    expect(result.GetResults()).toBe(-1);
-});
-
-test('Calculator multiplying two numbers', () => {
-    let result = Calculator.Multiplication(1,2);
+    let result = Calculator.Subtraction(4,2);
     expect(result.GetResults()).toBe(2);
 });
 
+test('Calculator multiplying two numbers', () => {
+    let result = Calculator.Multiplication(4,2);
+    expect(result.GetResults()).toBe(8);
+});
+
 test('Calculator dividing two numbers', () => {
-    let result = Calculator.Division(1,2);
-    expect(result.GetResults()).toBe(.5);
+    let result = Calculator.Division(4,2);
+    expect(result.GetResults()).toBe(2);
 });
 
 test('Calculator square of two numbers', () => {
@@ -31,7 +31,7 @@ test('Calculator square root two numbers', () => {
 });
 
 test('Calculator adding to calculations', () => {
-    let result = Calculator.Division(1,2);
+    let result = Calculator.Division(4,2);
     let calculations = Calculator.Calculations;
     calculations.forEach(function (calc) {
         console.log(calc.GetResults())
